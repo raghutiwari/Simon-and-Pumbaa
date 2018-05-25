@@ -1,76 +1,92 @@
+ @import url('https://fonts.googleapis.com/css?family=Rajdhani');
+
+
 html,body,.container-table{
 	height: 100%;
+	font-family: 'Rajdhani', sans-serif;
+	font-size: 130%;
+	font-weight: bold !important;
+	background: linear-gradient(to right, #1F1C2C,#928DAB);
 }
 #count{
 	margin:2%;
 	border: 1px solid grey;
 	padding-right: 2%;
 	padding: 2%; 
+	background: linear-gradient(to right, #000000, #434343);
+	color: white;
 }
 #start,#reset,#strict{
 	color: black !important;
+	font-weight: bold;
+	font-size: 100%;
 }
 .row{
 	margin:4%;
 }
 .one{
-	background-color: lightgreen;
+	background-color: #f5af19;
 }
 .two{
-	background-color: lightblue;
+	background-color: #20BDFF;
 }
 .three{
-	background-color: orange;
+	background-color: #DA4453;
 }
 .four{
-	background-color: yellow;
+	background-color: #45B649;
 }
 .activeGreen{
-	background-color: darkgreen !important;
+	background-color: #f12711 !important;
 	box-shadow: 1px 1px 12px 2px black !important;
 	transition: all 0.2s;
 }
 
 .activeRed{
-	background-color: red !important;
+	background-color: #89216B !important;
 	box-shadow: 1px 1px 12px 2px black !important; 
 	transition: all 0.2s;
 }
 
 .activeBlue{
-	background-color: blue !important;
+	background-color: #5433FF !important;
 	box-shadow: 1px 1px 12px 2px black !important;
 	transition: all 0.2s;
 }
 
 .activeYellow{
-	background-color: brown !important;
+	background-color: #0f9b0f !important;
 	box-shadow: 1px 1px 12px 2px black !important;
 	transition: all 0.2s;
 }
 .one:active{
-	background-color: darkgreen !important;
+	background-color: #f12711 !important;
 	box-shadow: 1px 1px 12px 2px black !important;
 	transition: all 0.2s;	
 }
 .two:active{
-	background-color: blue !important;
+	background-color: #5433FF !important;
 	box-shadow: 1px 1px 12px 2px black !important;
 	transition: all 0.2s;	
 }
 .three:active{
-	background-color: red !important;
+	background-color: #89216B !important;
 	box-shadow: 1px 1px 12px 2px black !important;
 	transition: all 0.2s;	
 }
 .four:active{
-	background-color: brown !important;
+	background-color: #0f9b0f !important;
 	box-shadow: 1px 1px 12px 2px black !important;
 	transition: all 0.2s;	
 }
-.startClass{
-	background-color: green !important;
+#start,#reset{
+	background: linear-gradient(to right, #D3CCE3,#E9E4F0);
+	transition: all 0.5s;
 }
+.startClass{
+	background: linear-gradient(to right, #CB356B,#BD3F32) !important;
+}
+
 #startlight{
 	color: black !important;
 	position: relative;
@@ -80,12 +96,49 @@ html,body,.container-table{
 .one:disabled,.two:disabled,.three:disabled,.four:disabled{
 	opacity: 1 !important;
 }
+
+.one,.two,.three,.four{
+	width: 170px !important;
+	height: 170px !important;
+	border-radius: 50%;
+	border: 1px solid black;
+
+}
+.rowone{
+	margin-top:10%;
+}
+#count{
+	box-shadow: 1px 1px 15px 1px black;
+	border:1px solid black;
+	}
+
+.message{
+	visibility: hidden;
+	color: red !important;
+z-index: -1;
+}
+.hidden{
+	visibility: hidden;
+}
+.alerted{
+	color: red !important;
+}
+
+/*---------------------------------------------*/
+/*TOOLTIP TEX*/
+
+
+
+
+
+
+
 /*---------------------------------------------*/
 
 .switch{
   --uiSwitchSize: var(--switchSize, 64px);
   --uiSwitchBgColor: var(--switchBgColor, #f1f1f1);
-  --uiSwitchBgColorActive: var(--switchBgColorActive, #4ed164);
+  --uiSwitchBgColorActive: var(--switchBgColorActive, #CB356B);
   --uiSwitchBorderColorActive: var(--switchBorderColorActive, #fff);
   --uiSwitchBorderColorFocus: var(--switchBgColorFocus, #43b556);
   --uiSwitchButtonBgColor: var(--switchButtonBgColor, #fff);  

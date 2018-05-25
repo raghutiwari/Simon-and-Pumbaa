@@ -20,6 +20,8 @@ $(document).ready(function(){
 		strict= $('.switch__toggle').is(":checked");
 		$('.switch__toggle').attr('disabled',true);
 		if(strict){
+			$(this).text('').fadeOut(300);
+			$(this).text('Started').fadeIn(300);
 			$(this).addClass('startClass');
 			if(flag==1){
 			flag=0;	
@@ -28,7 +30,8 @@ $(document).ready(function(){
 			}	
 		}
 		else {
-
+			$(this).text('').fadeOut(300);
+			$(this).text('Started').fadeIn(200);
 			$(this).addClass('startClass');
 			if(flag==1){
 			flag=0;	
@@ -45,9 +48,29 @@ function reset(){
 		flag=1;
 		count=0;
 		$('#countno').text(count);
+		$('#start').text('Start');
 		$('#start').removeClass('startClass');
+		strict= $('.switch__toggle').is(":checked");
+		$('.switch__toggle').attr('disabled',true);
+		if(strict){
+			$(this).text('').fadeOut(300);
+			$(this).text('Started').fadeIn(300);
+			$(this).addClass('startClass');
+			if(flag==1){
+			flag=0;	
 
-		start();
+			startstrict();
+			}	
+		}
+		else {
+			$(this).text('').fadeOut(300);
+			$(this).text('Started').fadeIn(200);
+			$(this).addClass('startClass');
+			if(flag==1){
+			flag=0;	
+			start();
+			}	
+		}
 
 
 
@@ -55,6 +78,7 @@ function reset(){
 	$('#reset').click(function(){
 		flag=1;
 		count=0;
+		$('#start').text('Start');
 		$('#start').removeClass('startClass');
 		$("#countno").text(count);
 		location.reload();
@@ -68,7 +92,8 @@ function startstrict(){
 	seq='';
 	userClicks=0;
 		count++;
-	$('#countno').text(count);
+	$('#countno').fadeOut(200);	
+	$('#countno').text(count).fadeIn(800);
 	cur=count;
 	flagcur=cur;
 	if(count==20){
@@ -162,7 +187,7 @@ function getSeqStrict(){
 			//
 			// getUserseq();
 		}
-	},1200);
+	},1300);
 
 
 
@@ -177,6 +202,11 @@ function getUserseqstrict(currseq){
 					console.log('userseq:'+userseq);
 					flagcur--;
 					if(flagcur==0 && userseq==seq){
+						if(count==20){
+							alert('You Won!!');
+							reset();
+							return;
+						}
 						seqwrong=0;
 						console.log('userseq when correct: '+userseq);
 						console.log('Right');
@@ -190,17 +220,18 @@ function getUserseqstrict(currseq){
 						right=0;
 						userseq='';
 						count=0;
-						alert("Wrong!");
-						startstrict();
+						alert("Wrong! Try Again");
+
+						startstrict().fadeIn(500);
 						return;
 					}
 					else if(!(seq.includes(userseq))){
 						console.log('Wrong');
 						right=0;
 						count=0;
-						alert("Wrong!");
+						alert("Wrong! Try Again");
 						console.log(seqwrong);
-						startstrict();
+						startstrict().fadeOut(220);
 						return;
 					}
 					});
@@ -226,7 +257,8 @@ function start(){
 	seq='';
 	userClicks=0;
 		count++;
-	$('#countno').text(count);
+	$('#countno').fadeOut(200);	
+	$('#countno').text(count).fadeIn(800);
 	cur=count;
 	flagcur=cur;
 	if(count==20){
@@ -333,6 +365,11 @@ function getUserseq(currseq){
 					console.log('userseq:'+userseq);
 					flagcur--;
 					if(flagcur==0 && userseq==seq){
+						if(count==20){
+							alert('You Won!!');
+							reset();
+							return;
+						}						
 						seqwrong=0;
 						console.log('userseq when correct: '+userseq);
 						console.log('Right');
@@ -349,7 +386,7 @@ function getUserseq(currseq){
 						flagcur=cur;
 						i=0;
 						//count=0;
-						alert("Wrong!");
+						alert("Wrong! Try Again");
 						retry();
 						return;
 					}
@@ -362,7 +399,7 @@ function getUserseq(currseq){
 						userseq='';
 						flagcur=cur;
 						i=0;
-						alert("Wrong!");
+						alert("Wrong! Try Again");
 						console.log(seqwrong);
 						retry();
 						return;
