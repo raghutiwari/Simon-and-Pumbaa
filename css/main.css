@@ -32,7 +32,7 @@ html,body,.container-table{
 }
 
 .activeRed{
-	background-color: Red !important;
+	background-color: red !important;
 	box-shadow: 1px 1px 12px 2px black !important; 
 	transition: all 0.2s;
 }
@@ -47,4 +47,24 @@ html,body,.container-table{
 	background-color: brown !important;
 	box-shadow: 1px 1px 12px 2px black !important;
 	transition: all 0.2s;
+}
+.one:active{
+	background-color: darkgreen !important;
+	box-shadow: 1px 1px 12px 2px black !important;
+	transition: all 0.2s;	
+}
+.two:active{
+	background-color: blue !important;
+	box-shadow: 1px 1px 12px 2px black !important;
+	transition: all 0.2s;	
+}
+.three:active{
+	background-color: red !important;
+	box-shadow: 1px 1px 12px 2px black !important;
+	transition: all 0.2s;	
+}
+.four:active{
+	background-color: brown !important;
+	box-shadow: 1px 1px 12px 2px black !important;
+	transition: all 0.2s;	
 }
