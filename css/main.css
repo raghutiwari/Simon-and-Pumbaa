@@ -1,0 +1,50 @@
+html,body,.container-table{
+	height: 100%;
+}
+#count{
+	margin:2%;
+	border: 1px solid grey;
+	padding-right: 2%;
+	padding: 2%; 
+}
+#start,#reset,#strict{
+	color: black !important;
+}
+.row{
+	margin:4%;
+}
+.one{
+	background-color: lightgreen;
+}
+.two{
+	background-color: lightblue;
+}
+.three{
+	background-color: orange;
+}
+.four{
+	background-color: yellow;
+}
+.activeGreen{
+	background-color: darkgreen !important;
+	box-shadow: 1px 1px 12px 2px black !important;
+	transition: all 0.2s;
+}
+
+.activeRed{
+	background-color: Red !important;
+	box-shadow: 1px 1px 12px 2px black !important; 
+	transition: all 0.2s;
+}
+
+.activeBlue{
+	background-color: blue !important;
+	box-shadow: 1px 1px 12px 2px black !important;
+	transition: all 0.2s;
+}
+
+.activeYellow{
+	background-color: brown !important;
+	box-shadow: 1px 1px 12px 2px black !important;
+	transition: all 0.2s;
+}
