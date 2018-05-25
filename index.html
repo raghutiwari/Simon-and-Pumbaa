@@ -7,6 +7,7 @@
 			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 			<!-- Bootstrap core CSS -->
 			<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+			<!-- <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet"> -->
 			<!-- Material Design Bootstrap -->
 			<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.0/css/mdb.min.css" rel="stylesheet">
 
@@ -14,12 +15,33 @@
 		</head>
 
 		<body>
+			<audio id="simon1">
+				<source src="https://s3.amazonaws.com/freecodecamp/simonSound1.mp3" type="audio/mpeg">
+			</audio>
+			<audio id="simon2">
+				<source src="https://s3.amazonaws.com/freecodecamp/simonSound2.mp3" type="audio/mpeg">
+			</audio>
+			<audio id="simon3">
+				<source src="https://s3.amazonaws.com/freecodecamp/simonSound3.mp3" type="audio/mpeg">
+			</audio>
+			<audio id="simon4">
+				<source src="https://s3.amazonaws.com/freecodecamp/simonSound4.mp3" type="audio/mpeg">
+			</audio>
+
 			<div class="container" id="myDiv">
 				<div class="row">
 					<div class="col-sm-12" align="center">
 						<span id="count">Count: <span id="countno">1</span></span>
-						<button class="btn" id="start">Start</button>
-						<button class="btn" id="strict">Strict Mode</button>
+						<button class="btn" id="start">
+							Start
+						</button>
+						<!-- <button class="btn" id="strict">Strict Mode</button> -->
+						<!-- <span>Strict Mode</span> -->	
+						<span>Strict Mode</span>
+					        <label class="switch switch_type1" role="switch">
+					          <input type="checkbox" class="switch__toggle">
+					          <span class="switch__label"></span>
+					        </label>
 						<button class="btn" id="reset">Reset</button>
 					</div>
 				</div>
@@ -61,6 +83,7 @@
 		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
 		<!-- MDB core JavaScript -->
 		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.0/js/mdb.min.js"></script>      
+		<!-- <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script> -->
 		<script class="reloadme" type="text/javascript" src="js/main.js">
 		</script>
 		</body>
